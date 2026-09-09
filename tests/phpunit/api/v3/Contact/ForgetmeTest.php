@@ -235,7 +235,7 @@ class api_v3_Contact_ForgetmeTest extends api_v3_Contact_BaseTestClass implement
       'gender_id' => 'Female',
       'birth_date' => '2010-09-07',
     ]);
-    $contact = $contactAPIResult['values'][$contactAPIResult['id']];;
+    $contact = $contactAPIResult['values'][$contactAPIResult['id']];
 
     $paymentTokenAPIResult = $this->createPaymentToken([
       'contact_id' => $contact['id']]
