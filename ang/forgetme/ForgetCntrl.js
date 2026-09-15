@@ -1,4 +1,4 @@
-(function(angular, $, _) {
+(function(angular, $) {
 
   angular.module('forgetme').config(function($routeProvider) {
       $routeProvider.when('/forgetme/forget/:id', {
@@ -57,4 +57,4 @@
       );
     };
   });
-})(angular, CRM.$, CRM._);
+})(angular, CRM.$);
