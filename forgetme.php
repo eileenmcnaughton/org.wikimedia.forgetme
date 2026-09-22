@@ -67,15 +67,15 @@ function forgetme_civicrm_alterLogTables(&$logTableSpec) {
  * Add forgetme action.
  */
 function forgetme_civicrm_summaryActions(&$actions, $contactID) {
-  $actions['contact_forgetme'] = array(
+  $actions['contact_forgetme'] = [
     'title' => E::ts('Forget Me'),
     'ref' => 'contact-forgetme',
     'key' => 'contact-forgetme',
     'weight' => 0,
     'class' => 'no-popup',
     'href' => str_replace('^', '#', CRM_Utils_System::url('civicrm/a/^/forgetme/forget/' . (int) $contactID)),
-    'permissions' => array('edit all contacts')
-  );
+    'permissions' => ['edit all contacts']
+  ];
 }
 
 /**

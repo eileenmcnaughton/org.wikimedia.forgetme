@@ -50,7 +50,7 @@ class api_v3_Contact_ShowmeTest extends api_v3_Contact_BaseTestClass implements 
         'contact_id' => $contact2ID]
     );
 
-    $result = civicrm_api3('Contact', 'Showme', array('id' => $contactID))['values'][$contactID];
+    $result = civicrm_api3('Contact', 'Showme', ['id' => $contactID])['values'][$contactID];
     $this->assertEquals(1, count($result['PaymentToken' . $paymentToken['id']]));
     $this->assertArrayNotHasKey('PaymentToken' . $paymentToken2['id'], $result);
     $this->assertEquals('Buffy Vampire Slayer', $result['display_name']);
