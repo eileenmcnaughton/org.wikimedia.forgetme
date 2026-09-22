@@ -138,20 +138,20 @@ class api_v3_Contact_BaseTestClass extends \PHPUnit\Framework\TestCase implement
    * @param int $contactId
    */
   public function cleanUpContact($contactId) {
-    $contributions = $this->callAPISuccess('Contribution', 'get', array(
+    $contributions = $this->callAPISuccess('Contribution', 'get', [
       'contact_id' => $contactId,
-    ));
+    ]);
     if (!empty($contributions['values'])) {
       foreach ($contributions['values'] as $id => $details) {
-        $this->callAPISuccess('Contribution', 'delete', array(
+        $this->callAPISuccess('Contribution', 'delete', [
           'id' => $id,
-        ));
+        ]);
       }
     }
-    $this->callAPISuccess('Contact', 'delete', array(
+    $this->callAPISuccess('Contact', 'delete', [
       'id' => $contactId,
       'skip_undelete' => 1,
-    ));
+    ]);
   }
 
 }

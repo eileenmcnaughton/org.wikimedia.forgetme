@@ -3,20 +3,20 @@
 // in CiviCRM. See also:
 // http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_angularModules
 
-return array (
+return [
   'js' =>
-  array (
+  [
     0 => 'ang/forgetme.js',
     1 => 'ang/forgetme/*.js',
     2 => 'ang/forgetme/*/*.js',
-  ),
+  ],
   'css' =>
-  array (
+  [
     0 => 'ang/forgetme.css',
-  ),
+  ],
   'partials' =>
-  array (
+  [
     0 => 'ang/forgetme',
-  ),
+  ],
   'requires' => ['ngPrint'],
-);
+];
